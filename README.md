@@ -12,9 +12,8 @@ Hello and welcome to my blog! I'm **Shafna Ashraf**, a passionate software engin
 ---
 
 ## 📝 Latest Posts
-1. [How to Use MyBatis for Dynamic SQL Queries](mybatis-dynamic-sql.md)
-2. [Troubleshooting REST API Issues in Angular](rest-api-debugging.md)
-3. [Getting Started with AWS for Java Developers](aws-for-java.md)
+1. [Internet gateway vs NAT gateways](mybatis-dynamic-sql.md)
+2. [ACL - Access Control List in AWS](rest-api-debugging.md)
 
 ---
 
