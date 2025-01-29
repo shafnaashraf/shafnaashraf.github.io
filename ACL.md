@@ -34,6 +34,8 @@ Let’s say you have an AWS VPC with two subnets:
 | 120     | SSH    | TCP      | 22         | 192.168.1.0/24 (only internal access) | ALLOW |
 | Default | -      | -        | -          | -                 | DENY       |
 
+
+
 ### 🔹 This setup allows:
 - Public access to web servers (**HTTP & HTTPS**).
 - **SSH access** from a specific internal range.
