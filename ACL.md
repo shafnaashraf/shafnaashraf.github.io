@@ -26,13 +26,16 @@ Let’s say you have an AWS VPC with two subnets:
 - **Public Subnet** (for web servers)
 - **Private Subnet** (for databases)
 
-### ACL Rules for Public Subnet
+
+### Example - ACL Rules for Public Subnet
+
 | Rule #  | Type   | Protocol | Port Range | Source            | Allow/Deny |
 |---------|--------|----------|------------|-------------------|------------|
 | 100     | HTTP   | TCP      | 80         | 0.0.0.0/0 (anyone) | ALLOW      |
 | 110     | HTTPS  | TCP      | 443        | 0.0.0.0/0 (anyone) | ALLOW      |
 | 120     | SSH    | TCP      | 22         | 192.168.1.0/24 (only internal access) | ALLOW |
 | Default | -      | -        | -          | -                 | DENY       |
+
 
 
 
