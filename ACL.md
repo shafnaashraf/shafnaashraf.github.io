@@ -48,7 +48,7 @@ Let’s say you have an AWS VPC with two subnets:
 | **Evaluation Order** | Processed in numerical order | All rules are checked |
 | **Use Case** | Subnet-wide traffic filtering | Instance-specific security |
 
-## When to Use ACLs?
+## When to Use ACLs in AWS?
 ✔️ To create a **first layer of security** at the subnet level.
 ✔️ When you need **broad traffic filtering** for an entire subnet.
 ✔️ To **block unwanted IPs** at the network level (e.g., block traffic from specific countries).
