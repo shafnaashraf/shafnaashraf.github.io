@@ -44,7 +44,9 @@ Let’s say you have an AWS VPC with two subnets:
 - **SSH access** from a specific internal range.
 - **Blocks all other incoming traffic**.
 
-## Difference Between ACLs and Security Groups
+
+## Difference Between ACLs and Security Groups in AWS
+
 | Feature            | Network ACL (NACL) | Security Group |
 |-------------------|------------------|---------------|
 | **Level of control** | Subnet-level | Instance-level |
@@ -52,6 +54,8 @@ Let’s say you have an AWS VPC with two subnets:
 | **Stateful?** | No (stateless) | Yes (stateful) |
 | **Evaluation Order** | Processed in numerical order | All rules are checked |
 | **Use Case** | Subnet-wide traffic filtering | Instance-specific security |
+
+
 
 ## When to Use ACLs in AWS?
 ✔️ To create a **first layer of security** at the subnet level.
