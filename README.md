@@ -13,7 +13,7 @@ Hello and welcome to my blog! I'm **Shafna Shehin**, a passionate software engin
 
 ## 📝 Latest Posts
 1. [Internet gateway vs NAT gateways](Gateways.md)
-2. [ACL - Access Control List in AWS](rest-api-debugging.md)
+2. [ACL - Access Control List in AWS](ACL.md)
 
 ---
 
