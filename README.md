@@ -1,4 +1,4 @@
-# Welcome to My Technical Blog! 👩‍💻
+# Welcome to My Technical Blog
 
 Hello and welcome to my blog! I'm **Shafna Shehin**, a passionate software engineer specializing in **Java**, **AngularJS**, **AWS** and **Spring Boot**. Here, I share insights, tutorials, and solutions related to software development, debugging, and the latest tech trends.
 
