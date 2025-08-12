@@ -32,6 +32,7 @@ Open Command Prompt (Windows) or Terminal (Mac/Linux) and run:
 ```bash
 java --version
 ```
+**If the command doesnot return any java versions, set up the path varibale in your system as follows**
 
 ### Setting Up Path Variables (Windows)
 If the command doesn't work, you need to add Java to your system PATH:
