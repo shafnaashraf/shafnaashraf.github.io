@@ -3,3 +3,4 @@
 ## CONTENTS
 1. [Introduction to Java](IntroJava.md)
 2. [Requirements for code development](requireJava.md)
+3. [Understanding Java Code Flow: From Source to Execution](codeFlow.md)
