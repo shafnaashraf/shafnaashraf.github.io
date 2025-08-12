@@ -41,7 +41,6 @@ If the command doesn't work, you need to add Java to your system PATH:
 #### 2. Add to System Variables or User Variables:
       Variable Name: JAVA_HOME
       Variable Value: Path to your JDK installation (e.g., C:\Program Files\Java\jdk-17)
-      ####
       
 #### 3. Edit PATH variable and add: %JAVA_HOME%\bin
 #### 4. Restart Command Prompt and test with java --version
