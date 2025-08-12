@@ -34,8 +34,8 @@ java --version
 ```
 
 ### Setting Up Path Variables (Windows)
-
 If the command doesn't work, you need to add Java to your system PATH:
+
 #### 1. Open System Properties → Advanced → Environment Variables
 #### 2. Add to System Variables or User Variables:
       Variable Name: JAVA_HOME
@@ -43,8 +43,8 @@ If the command doesn't work, you need to add Java to your system PATH:
 #### 3. Edit PATH variable and add: %JAVA_HOME%\bin
 #### 4. Restart Command Prompt and test with java --version
 
-###Typical JDK Installation Paths:
-#### * Windows: C:\Program Files\Java\jdk-[version]\bin
-#### * Mac: /Library/Java/JavaVirtualMachines/jdk-[version].jdk/Contents/Home/bin
-#### * Linux: /usr/lib/jvm/java-[version]-openjdk/bin
+### Typical JDK Installation Paths:
+      Windows: C:\Program Files\Java\jdk-[version]\bin
+      Mac: /Library/Java/JavaVirtualMachines/jdk-[version].jdk/Contents/Home/bin
+      Linux: /usr/lib/jvm/java-[version]-openjdk/bin
 
