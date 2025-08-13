@@ -9,3 +9,4 @@
 6. [Operators in Java](operatorsJava.md)
 7. [Conditional statements and Loops in Java](conditoonNLoopJava.md)
 8. [Object Oriented Programming in Java(OOPS)](oops.md)
+9. [Arrays in Java](arrayJava.md)
