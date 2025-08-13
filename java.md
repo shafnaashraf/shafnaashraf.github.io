@@ -11,3 +11,4 @@
 8. [Object Oriented Programming in Java(OOPS)](oops.md)
 9. [Arrays in Java](arrayJava.md)
 10. [Strings in Java](stringsJava.md)
+11. [Static keyword in Java](staticJava.md)
