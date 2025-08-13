@@ -6,3 +6,4 @@
 3. [Understanding Java Code Flow: From Source to Execution](codeFlow.md)
 4. [Variables and Data types](variableNDataType.md)
 5. [Java type conversions and casting](typeConversion.md)
+6. [Operators in Java](operatorsJava.md)
