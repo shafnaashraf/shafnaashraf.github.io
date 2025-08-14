@@ -10,7 +10,7 @@
 7. [Conditional statements and Loops in Java](conditoonNLoopJava.md)
 8. [Object Oriented Programming in Java(OOPS)](oops.md)
 9. [Encapsulation in Java](encapsuleJava.md)
-10. [Constructor in Java](constructJava.md)
+10. [Constructor in Java](constructorJava.md)
 11. [Arrays in Java](arrayJava.md)
 12. [Strings in Java](stringsJava.md)
 13. [Static keyword in Java](staticJava.md)
