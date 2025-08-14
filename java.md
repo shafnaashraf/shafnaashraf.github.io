@@ -23,3 +23,4 @@
 20. [Final keyword in Java](finalKeyJava.md)
 21. [Abstract keyword in Java](abstractJava.md)
 22. [this and super keywords](thisNSuperJava.md)
+23. [Java Anonymous Inner class](anonymousJava.md)
