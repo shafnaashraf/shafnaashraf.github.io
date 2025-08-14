@@ -24,3 +24,4 @@
 21. [Abstract keyword in Java](abstractJava.md)
 22. [this and super keywords](thisNSuperJava.md)
 23. [Java Anonymous Inner class](anonymousJava.md)
+24. [Interface in Java](interfaceJava.md)
