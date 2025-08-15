@@ -2,7 +2,7 @@
 
 ## Functional Interface
 
-A **Functional Interface** is also known as **SAI (Single Abstract Interface)** - an interface with exactly one abstract method.
+A **Functional Interface** is also known as **SAM (Single Abstract Method)** - an interface with exactly one abstract method.
 
 ### Defining a Functional Interface
 
