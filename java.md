@@ -27,6 +27,7 @@
 24. [Interface in Java](interfaceJava.md)
 25. [Types of Interfaces](typesOfInterface.md)
 26. [Functional Interface and Lambda expressions](functionalInterJava.md)
-27. [Enum in Java](enumJava.md)
-28. [Java Annotations](annotationJava.md)
+27. [Exceptions in Java](exceptionsJava.md)
+28. [Enum in Java](enumJava.md)
+29. [Java Annotations](annotationJava.md)
     
