@@ -25,6 +25,8 @@
 22. [this and super keywords](thisNSuperJava.md)
 23. [Java Anonymous Inner class](anonymousJava.md)
 24. [Interface in Java](interfaceJava.md)
-25. [Enum in Java](enumJava.md)
-26. [Java Annotations](annotationJava.md)
-27. [Functional Interface and Lambda expressions](functionalInterJava.md)
+25. [Types of Interfaces](typesOfInterface.md)
+26. [Functional Interface and Lambda expressions](functionalInterJava.md)
+27. [Enum in Java](enumJava.md)
+28. [Java Annotations](annotationJava.md)
+    
