@@ -25,3 +25,4 @@
 22. [this and super keywords](thisNSuperJava.md)
 23. [Java Anonymous Inner class](anonymousJava.md)
 24. [Interface in Java](interfaceJava.md)
+25. [Enum in Java](enumJava.md)
