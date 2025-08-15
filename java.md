@@ -26,3 +26,4 @@
 23. [Java Anonymous Inner class](anonymousJava.md)
 24. [Interface in Java](interfaceJava.md)
 25. [Enum in Java](enumJava.md)
+26. [Java Annotations](annotationJava.md)
