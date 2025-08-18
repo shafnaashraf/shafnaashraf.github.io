@@ -13,7 +13,7 @@ Hello and welcome to my blog! I'm **Shafna Shehin**, a passionate software engin
 
 ## 📝 Latest Posts
 1. [JAVA](java.md)
-2. [Servlets in Java](servlets.md)
+2. [Servlets in Java](servlet.md)
 3. [Internet gateway vs NAT gateways](Gateways.md)
 4. [ACL - Access Control List in AWS](ACL.md)
 
