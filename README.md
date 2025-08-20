@@ -17,8 +17,9 @@ Hello and welcome to my blog! I'm **Shafna Shehin**, a passionate software engin
 3. [Java Server Pages (JSP)](jsp.md)
 4. [Spring framework](spring.md)
 5. [Spring security](springSecurity.md)
-6. [Internet gateway vs NAT gateways](Gateways.md)
-7. [ACL - Access Control List in AWS](ACL.md)
+6. [Kafka tutorial](kafka.md)
+7. [Internet gateway vs NAT gateways](Gateways.md)
+8. [ACL - Access Control List in AWS](ACL.md)
 
 ---
 
