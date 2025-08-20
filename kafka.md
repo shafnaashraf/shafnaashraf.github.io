@@ -9,4 +9,5 @@
 6. [Topic Replication Factor](kafka6.md)
 7. [Kafka Producer Acknowledgments and Topic Durability](kafka7.md)
 8. [Zookeeper](kafka8.md)
+9. [Kafka kraft mode](kafka9.md)
     
