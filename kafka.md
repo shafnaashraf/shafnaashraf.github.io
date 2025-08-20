@@ -7,4 +7,5 @@
 4. [Kafka Consumers](kafka4.md)
 5. [Kafka Consumer Groups](kafka5.md)
 6. [Topic Replication Factor](kafka6.md)
+7. [Kafka Producer Acknowledgments and Topic Durability](kafka7.md)
     
