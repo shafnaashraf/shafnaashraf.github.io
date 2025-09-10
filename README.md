@@ -18,7 +18,7 @@ Hello and welcome to my blog! I'm **Shafna Shehin**, a passionate software engin
 4. [Spring framework](spring.md)
 5. [Spring security](springSecurity.md)
 6. [Kafka tutorial](kafka.md)
-7. [Devops](devops1.md)
+7. [Devops](devops.md)
 8. [Internet gateway vs NAT gateways](Gateways.md)
 9. [ACL - Access Control List in AWS](ACL.md)
 
