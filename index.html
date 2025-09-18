@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shafna Ashraf - Senior Java Backend Developer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header .subtitle {
+            font-size: 1.3em;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .header .location {
+            font-size: 1.1em;
+            color: #888;
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            padding: 10px 20px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: transform 0.3s ease;
+        }
+
+        .social-links a:hover {
+            transform: translateY(-3px);
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #333;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .about-text {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .skill-category {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            padding: 20px;
+            border-radius: 15px;
+            color: white;
+        }
+
+        .skill-category h3 {
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .skill-category ul {
+            list-style: none;
+        }
+
+        .skill-category li {
+            padding: 5px 0;
+            opacity: 0.9;
+        }
+
+        .experience-item {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            border-left: 5px solid #667eea;
+        }
+
+        .experience-item h3 {
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .experience-item .company {
+            color: #667eea;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .experience-item .duration {
+            color: #888;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .blog-post {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 25px;
+            border-radius: 15px;
+            color: white;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .blog-post:hover {
+            transform: translateY(-5px);
+        }
+
+        .blog-post h3 {
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .blog-post p {
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        .achievements {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .achievement-item {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .achievement-item .icon {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            font-size: 1em;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .highlight-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            border-radius: 15px;
+        }
+
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #333;
+            display: block;
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .social-links {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <div class="header">
+            <div class="profile-img">SA</div>
+            <h1>Shafna Ashraf</h1>
+            <div class="subtitle">Senior Java Backend Developer & Technical Content Creator</div>
+            <div class="location">📍 Dubai, UAE | Available for Global Opportunities</div>
+            
+            <div class="highlight-stats">
+                <div class="stat-item">
+                    <span class="stat-number">3+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">10+</span>
+                    <span class="stat-label">Enterprise Projects</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Test Coverage Advocate</span>
+                </div>
+            </div>
+            
+            <div class="social-links">
+                <a href="https://github.com/shafnaashraf" target="_blank">🔗 GitHub</a>
+                <a href="https://www.linkedin.com/in/shafna-ashraf-/" target="_blank">💼 LinkedIn</a>
+                <a href="mailto:shafna19ashraf@gmail.com">📧 Contact</a>
+                <a href="#blog">📚 Tech Blog</a>
+            </div>
+        </div>
+
+        <!-- About Section -->
+        <div class="section">
+            <h2>🚀 About Me</h2>
+            <div class="about-text">
+                <p>Passionate Senior Java Backend Developer with 3+ years of enterprise software development experience, specializing in microservices architecture, Spring Boot applications, and cloud-native solutions. Currently architecting scalable payment solutions at PAYOK Dubai, with a proven track record of reducing system downtime by 40% and maintaining 100% unit test coverage.</p>
+                
+                <p>Beyond coding, I'm dedicated to knowledge sharing and technical mentoring. I create comprehensive tutorials and documentation to help fellow developers navigate complex Java ecosystems, from fundamental concepts to advanced enterprise patterns.</p>
+                
+                <p><strong>My Mission:</strong> Building robust, scalable backend systems while empowering the developer community through knowledge sharing and technical mentorship.</p>
+            </div>
+        </div>
+
+        <!-- Technical Expertise -->
+        <div class="section">
+            <h2>💻 Technical Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>☕ Backend Development</h3>
+                    <ul>
+                        <li>Java 17+ & Advanced OOP</li>
+                        <li>Spring Boot & Spring Framework</li>
+                        <li>Microservices Architecture</li>
+                        <li>RESTful API Design</li>
+                        <li>Event-Driven Programming</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>🗄️ Data & Messaging</h3>
+                    <ul>
+                        <li>PostgreSQL & MySQL</li>
+                        <li>Hibernate & MyBatis</li>
+                        <li>Apache Kafka</li>
+                        <li>Event Streaming</li>
+                        <li>Database Optimization</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>☁️ Cloud & DevOps</h3>
+                    <ul>
+                        <li>AWS (EC2, S3, Lambda)</li>
+                        <li>Docker & Kubernetes</li>
+                        <li>CI/CD Pipelines</li>
+                        <li>Jenkins Automation</li>
+                        <li>Infrastructure as Code</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>🧪 Quality & Testing</h3>
+                    <ul>
+                        <li>JUnit & Test-Driven Development</li>
+                        <li>Integration Testing</li>
+                        <li>Code Quality Standards</li>
+                        <li>Performance Optimization</li>
+                        <li>Debugging & Troubleshooting</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Professional Experience -->
+        <div class="section">
+            <h2>💼 Professional Journey</h2>
+            
+            <div class="experience-item">
+                <h3>Java Developer</h3>
+                <div class="company">PAYOK | Dubai</div>
+                <div class="duration">November 2024 - Present</div>
+                <p>Architecting microservices-based payment solutions using Spring Boot and Java. Leading cloud-native infrastructure design on AWS with Docker containerization. Collaborating with cross-functional teams to deliver enterprise-grade payment features within agile sprints.</p>
+            </div>
+            
+            <div class="experience-item">
+                <h3>Solution Engineer</h3>
+                <div class="company">IBS Software | Kochi</div>
+                <div class="duration">July 2022 - September 2024</div>
+                <p>Developed enterprise Java applications with focus on performance optimization. Led production issue resolution, reducing system downtime by 40%. Mentored junior developers and received multiple Team Champ awards for consistent delivery excellence.</p>
+            </div>
+            
+            <div class="experience-item">
+                <h3>Software Development Intern → Full-Stack Developer</h3>
+                <div class="company">Converj</div>
+                <div class="duration">January 2022 - June 2022</div>
+                <p>Contributed to B2B fintech payment solutions. Quickly mastered Go and React frameworks, earning a full-time job offer based on exceptional performance and innovative contributions to payment system architecture.</p>
+            </div>
+        </div>
+
+        <!-- Technical Blog & Knowledge Sharing -->
+        <div class="section" id="blog">
+            <h2>📚 Technical Blog & Knowledge Sharing</h2>
+            <p style="margin-bottom: 25px; font-size: 1.1em; color: #555;">Sharing knowledge and helping developers master Java ecosystem complexities through comprehensive tutorials and real-world examples.</p>
+            
+            <div class="blog-grid">
+                <div class="blog-post">
+                    <h3>☕ Core Java Mastery</h3>
+                    <p>Deep dive into Java fundamentals, OOP principles, collections framework, and advanced concepts essential for enterprise development.</p>
+                </div>
+                <div class="blog-post">
+                    <h3>🌐 Servlets & Web Development</h3>
+                    <p>Complete guide to Java Servlets, request handling, session management, and building robust web applications from scratch.</p>
+                </div>
+                <div class="blog-post">
+                    <h3>🍃 Spring Framework Ecosystem</h3>
+                    <p>Comprehensive tutorials on Spring Boot, dependency injection, AOP, and building enterprise-grade applications with Spring.</p>
+                </div>
+                <div class="blog-post">
+                    <h3>🔐 JWT & Spring Security</h3>
+                    <p>Practical guides on implementing secure authentication, authorization, JWT tokens, and Spring Security best practices.</p>
+                </div>
+                <div class="blog-post">
+                    <h3>📡 Apache Kafka Integration</h3>
+                    <p>Real-world examples of event-driven architecture, message streaming, and integrating Kafka with Spring Boot applications.</p>
+                </div>
+                <div class="blog-post">
+                    <h3>🚀 DevOps for Java Developers</h3>
+                    <p>Hands-on tutorials for CI/CD pipelines, Docker containerization, AWS deployment, and modern development workflows.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Achievements & Recognition -->
+        <div class="section">
+            <h2>🏆 Achievements & Recognition</h2>
+            <div class="achievements">
+                <div class="achievement-item">
+                    <div class="icon">🥇</div>
+                    <h4>Multiple Team Champ Awards</h4>
+                    <p>IBS Software - Consistent on-time delivery</p>
+                </div>
+                <div class="achievement-item">
+                    <div class="icon">⭐</div>
+                    <h4>Department Champion</h4>
+                    <p>Core module stabilization & reliability</p>
+                </div>
+                <div class="achievement-item">
+                    <div class="icon">🎓</div>
+                    <h4>Academic Excellence</h4>
+                    <p>CGPA 9.67/10 - Overall Academic Topper</p>
+                </div>
+                <div class="achievement-item">
+                    <div class="icon">📈</div>
+                    <h4>System Performance</h4>
+                    <p>Reduced downtime by 40% through optimization</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="section">
+            <h2>🤝 Let's Connect</h2>
+            <div class="contact-form">
+                <p style="text-align: center; margin-bottom: 30px; font-size: 1.1em; color: #555;">
+                    Interested in collaboration, technical discussions, or exploring opportunities? Let's connect!
+                </p>
+                
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="6" required placeholder="Let me know how I can help or what you'd like to discuss..."></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Send Message</button>
+            </div>
+            
+            <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee;">
+                <p><strong>📧 Email:</strong> shafna19ashraf@gmail.com</p>
+                <p><strong>📱 Phone:</strong> +971589656612</p>
+                <p><strong>📍 Location:</strong> Dubai, UAE (Open to remote opportunities)</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Contact form handling
+        document.querySelector('.submit-btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            if (name && email && subject && message) {
+                // Create mailto link
+                const mailtoLink = `mailto:shafna19ashraf@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`From: ${name} (${email})\n\n${message}`)}`;
+                window.location.href = mailtoLink;
+            } else {
+                alert('Please fill in all fields');
+            }
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
