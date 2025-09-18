@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Core Java Mastery
-permalink: /servlet/
+title:  Java Sever Pages
+permalink: /jsp/
 ---
 # Complete JSP Tutorial
 
