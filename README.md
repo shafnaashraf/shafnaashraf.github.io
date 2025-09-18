@@ -17,7 +17,6 @@ Hello and welcome to my blog! I'm **Shafna Shehin**, a passionate software engin
 3. [Java Server Pages (JSP)](jsp.md)
 4. [Spring framework](spring.md)
 5. [JWT](jwt.md)
-6. [Spring security](springSecurity.md)
 7. [Kafka tutorial](kafka.md)
 8. [Devops](devops.md)
 
