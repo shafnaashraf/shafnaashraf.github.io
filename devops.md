@@ -1,4 +1,8 @@
-
+---
+layout: default
+title: Devops for java
+permalink: /devops/
+---
 ## CONTENTS
 1. [Introduction to Devops](devops1.md)
 2. [CI / CD introduction](devops2.md)
