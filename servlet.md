@@ -1,3 +1,8 @@
+---
+layout: default
+title: Core Java Mastery
+permalink: /servlet/
+---
 # Java Servlets Tutorial
 
 ## Overview
