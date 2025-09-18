@@ -1,3 +1,8 @@
+---
+layout: default
+title: Spring framework
+permalink: /spring/
+---
 # Spring Framework
 
 ## CONTENTS
