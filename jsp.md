@@ -1,3 +1,8 @@
+---
+layout: default
+title: Core Java Mastery
+permalink: /servlet/
+---
 # Complete JSP Tutorial
 
 ## Table of Contents
