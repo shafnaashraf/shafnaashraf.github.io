@@ -1,3 +1,9 @@
+---
+layout: default
+title: Core Java Mastery
+permalink: /java/
+---
+
 # Java Programming Language
 
 ## CONTENTS
