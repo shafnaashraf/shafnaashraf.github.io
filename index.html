@@ -4,7 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shafna - Senior Java Backend Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --dark-blue: #0F172A;
+            --light-blue: #22D3EE;
+            --soft-white: #F8F9FA;
+            --text-color: #333;
+            --sub-color: #666;
+            --accent-color: #3498db;
+            --gradient-main: linear-gradient(135deg, var(--dark-blue) 0%, var(--light-blue) 100%);
+            --gradient-header: linear-gradient(135deg, var(--dark-blue), #764ba2);
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -12,11 +26,13 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Poppins', sans-serif;
             line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #0F172A 0%, #22D3EE 100%);
+            color: var(--text-color);
+            background: var(--soft-white);
             min-height: 100vh;
+            overflow-x: hidden;
+            background: linear-gradient(135deg, #0f172a 0%, #22d3ee 100%);
         }
 
         .container {
@@ -26,140 +42,186 @@
         }
 
         .header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 40px;
+            background: white;
+            border-radius: 25px;
+            padding: 50px 30px;
             margin-bottom: 30px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            box-shadow: var(--shadow);
             text-align: center;
-            animation: fadeInUp 0.8s ease;
+            position: relative;
+            overflow: hidden;
+            animation: fadeInDown 1s ease-out;
         }
 
         .profile-img {
-            width: 150px;
-            height: 150px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
-            margin: 0 auto 0px;
-            background: linear-gradient(135deg, #0F172A, #0F172A);
+            background: var(--gradient-header);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 48px;
+            font-size: 40px;
             color: white;
-            font-weight: bold;
+            font-weight: 600;
+            margin: 0 auto 20px;
+            border: 5px solid white;
+            box-shadow: 0 0 0 5px var(--light-blue);
         }
 
         .header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            background: linear-gradient(135deg, #0F172A, #764ba2);
+            font-size: 3em;
+            margin-bottom: 5px;
+            background: var(--gradient-header);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
 
         .header .subtitle {
-            font-size: 1.3em;
-            color: #666;
-            margin-bottom: 20px;
+            font-size: 1.2em;
+            color: var(--sub-color);
+            margin-bottom: 10px;
         }
 
         .header .location {
-            font-size: 1.1em;
+            font-size: 1em;
             color: #888;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
 
         .social-links {
             display: flex;
             justify-content: center;
-            gap: 20px;
-            margin-top: 20px;
+            gap: 15px;
         }
 
         .social-links a {
-            padding: 10px 20px;
-            background: linear-gradient(135deg, #0F172A, #22D3EE);
+            padding: 12px 25px;
+            background: var(--dark-blue);
             color: white;
             text-decoration: none;
-            border-radius: 25px;
-            transition: transform 0.3s ease;
+            border-radius: 50px;
+            font-weight: 500;
+            transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
         }
 
         .social-links a:hover {
-            transform: translateY(-3px);
+            transform: translateY(-5px) scale(1.05);
+            background: var(--accent-color);
+            box-shadow: 0 8px 15px rgba(52, 152, 219, 0.3);
         }
 
         .section {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 30px;
+            background: white;
+            border-radius: 25px;
+            padding: 40px;
             margin-bottom: 30px;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-            animation: fadeInUp 0.8s ease;
+            box-shadow: var(--shadow);
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
         }
 
         .section h2 {
             font-size: 2em;
-            margin-bottom: 20px;
-            color: #333;
-            border-bottom: 3px solid #2E2E2E;
+            margin-bottom: 25px;
+            color: var(--dark-blue);
+            position: relative;
             padding-bottom: 10px;
         }
+        
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 4px;
+            background-color: var(--light-blue);
+            border-radius: 2px;
+        }
 
-        .about-text {
+        .about-text p {
             font-size: 1.1em;
             line-height: 1.8;
-            color: #555;
+            color: var(--sub-color);
+            margin-bottom: 15px;
         }
 
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
             margin-top: 20px;
         }
 
         .skill-category {
-            background: linear-gradient(135deg, #ee6c4d 0%, #98c1d9 80%);
-            padding: 20px;
-            border-radius: 15p
-            color: white;
+            background: var(--soft-white);
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid #e0e0e0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
+        .skill-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+        
         .skill-category h3 {
             margin-bottom: 15px;
             font-size: 1.3em;
+            color: var(--dark-blue);
         }
 
         .skill-category ul {
             list-style: none;
+            padding: 0;
         }
 
         .skill-category li {
-            padding: 5px 0;
-            opacity: 0.9;
+            padding: 8px 0;
+            font-size: 1em;
+            color: var(--text-color);
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .skill-category li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            color: var(--light-blue);
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
         }
 
         .experience-item {
-            background: #f8f9fa;
-            padding: 25px;
+            background: var(--soft-white);
+            padding: 30px;
             border-radius: 15px;
             margin-bottom: 20px;
-            border-left: 5px solid #0F172A;
+            border-left: 5px solid var(--accent-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .experience-item:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
         }
 
         .experience-item h3 {
-            color: #333;
+            color: var(--dark-blue);
             margin-bottom: 5px;
         }
 
         .experience-item .company {
-            color: #667eea;
-            font-weight: bold;
-            margin-bottom: 10px;
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-bottom: 5px;
         }
 
         .experience-item .duration {
@@ -167,7 +229,7 @@
             font-size: 0.9em;
             margin-bottom: 15px;
         }
-
+        
         .blog-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -175,130 +237,72 @@
         }
 
         .blog-post {
-            background: linear-gradient(135deg, #22D3EE 0%, #0F172A 100%);
+            background: var(--dark-blue);
             padding: 25px;
             border-radius: 15px;
             color: white;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             cursor: pointer;
-            height: 75px;
+            text-align: center;
         }
-
-        .blog-post:hover {
-            transform: translateY(-5px);
-        }
-
+        
         .blog-post h3 {
-            margin-bottom: 15px;
-            font-size: 1.1em;
+            margin-bottom: 10px;
+            font-size: 1.2em;
         }
 
         .blog-post p {
-            opacity: 0.9;
-            line-height: 1.6;
+            font-size: 0.9em;
+            opacity: 0.8;
         }
 
         .blog-post-link {
             text-decoration: none;
-            color: inherit;
+        }
+        
+        .highlight-stats {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 30px 0;
         }
 
-        .achievements {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
-        }
-
-        .achievement-item {
-            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
-            padding: 20px;
-            border-radius: 15px;
+        .stat-item {
             text-align: center;
-        }
-
-        .achievement-item .icon {
-            font-size: 2em;
-            margin-bottom: 10px;
-        }
-
-        .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 15px;
-            border: 2px solid #ddd;
-            border-radius: 10px;
-            font-size: 1em;
-            transition: border-color 0.3s ease;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #667eea;
-        }
-
-        .submit-btn {
-            background: linear-gradient(135deg, #22D3EE, #0F172A);
-            color: white;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 25px;
-            font-size: 1.1em;
-            cursor: pointer;
+            padding: 10px 20px;
+            flex-grow: 1;
+            animation: fadeIn 1.5s ease-in-out;
             transition: transform 0.3s ease;
-            width: 100%;
+        }
+        
+        .stat-item:hover {
+            transform: translateY(-5px);
         }
 
-        .submit-btn:hover {
-            transform: translateY(-2px);
-        }
-           .section-title {
-            font-size: 18px;
-            font-weight: bold;
-            color: #2c3e50;
-            margin-top: 25px;
-            margin-bottom: 15px;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 5px;
-        }
-        
-        .subsection-title {
-            font-size: 16px;
-            font-weight: bold;
-            color: #34495e;
-            margin-top: 20px;
-            margin-bottom: 10px;
-        }
-        
-        ul {
-            margin: 0;
-            padding-left: 20px;
-        }
-        
-        li {
-            margin-bottom: 8px;
-            text-align: justify;
+        .stat-number {
+            font-size: 2.8em;
+            font-weight: 700;
+            color: var(--dark-blue);
+            display: block;
         }
 
+        .stat-label {
+            color: var(--sub-color);
+            font-size: 0.9em;
+            font-weight: 400;
+        }
+        
         @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInDown {
             from {
                 opacity: 0;
-                transform: translateY(30px);
+                transform: translateY(-20px);
             }
             to {
                 opacity: 1;
@@ -306,83 +310,54 @@
             }
         }
 
-        .highlight-stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin: 20px 0;
-        }
-
-        .stat-item {
-            text-align: center;
-            padding: 8px;
-            background: linear-gradient(135deg, #22D3EE 0%, #64748B 100%);
-            border-radius: 15px;
-        }
-
-        .stat-number {
-            font-size: 2.5em;
-            font-weight: bold;
-            color: #333;
-            display: block;
-        }
-
-        .stat-label {
-            color: #311f1f;
-            font-size: 0.9em;
-        }
-
         @media (max-width: 768px) {
-            .container {
-                padding: 10px;
-            }
-            
             .header h1 {
                 font-size: 2em;
             }
-            
             .social-links {
                 flex-direction: column;
                 align-items: center;
+            }
+            .social-links a {
+                width: 80%;
+                text-align: center;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Header Section -->
         <div class="header">
             <div class="profile-img">SA</div>
             <h1>Shafna</h1>
             <div class="subtitle">Senior Java Backend Developer & Technical Content Creator</div>
-            <div class="location">📍 Dubai, UAE | Available for Global Opportunities</div>
+            <div class="location"><i class="fas fa-map-marker-alt"></i> Dubai, UAE | Available for Global Opportunities</div>
             
             <div class="highlight-stats">
                 <div class="stat-item">
-                    <span class="stat-number">3+</span>
+                    <span class="stat-number" data-target="3">0</span>
                     <span class="stat-label">Years Experience</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number">5+</span>
+                    <span class="stat-number" data-target="5">0</span>
                     <span class="stat-label">Enterprise Projects</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number">100%</span>
+                    <span class="stat-number" data-target="100">0</span>
                     <span class="stat-label">Test Coverage Advocate</span>
                 </div>
             </div>
             
             <div class="social-links">
-                <a href="https://github.com/shafnaashraf" target="_blank">🔗 GitHub</a>
-                <a href="https://www.linkedin.com/in/shafna-ashraf-/" target="_blank">💼 LinkedIn</a>
-                <a href="mailto:shafna19ashraf@gmail.com">📧 Contact</a>
-                <a href="#blog">📚 Tech Blog</a>
+                <a href="https://github.com/shafnaashraf" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                <a href="https://www.linkedin.com/in/shafna-ashraf-/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="mailto:shafna19ashraf@gmail.com"><i class="fas fa-envelope"></i> Contact</a>
+                <a href="#blog"><i class="fas fa-blog"></i> Tech Blog</a>
             </div>
         </div>
-
-        <!-- About Section -->
-        <div class="section">
-            <h2>🚀 About Me</h2>
+        
+        <div class="section" id="about">
+            <h2><i class="fas fa-rocket"></i> About Me</h2>
             <div class="about-text">
                 <p>Passionate Senior Java Backend Developer with 3+ years of enterprise software development experience, specializing in microservices architecture, Spring Boot applications, and cloud-native solutions. Currently architecting scalable payment solutions at PAYOK Dubai, with a proven track record of excellent performance.</p>
                 
@@ -391,10 +366,9 @@
                 <p><strong>My Mission:</strong> Building robust, scalable backend systems while empowering the developer community through knowledge sharing and technical mentorship.</p>
             </div>
         </div>
-
-        <!-- Technical Expertise -->
-        <div class="section">
-            <h2>💻 Technical Expertise</h2>
+        
+        <div class="section" id="skills">
+            <h2><i class="fas fa-code"></i> Technical Expertise</h2>
             <div class="skills-grid">
                 <div class="skill-category">
                     <h3>Backend Development</h3>
@@ -430,67 +404,56 @@
                         <li>Integration Testing</li>
                         <li>Code Quality Standards</li>
                         <li>Performance Optimization</li>
-                        <li>Debugging & Troubleshooting</li>
                     </ul>
                 </div>
             </div>
         </div>
-
-        <!-- Professional Experience -->
-        <div class="section">
-            <h2>💼 Professional Journey</h2>
-            
+        
+        <div class="section" id="experience">
+            <h2><i class="fas fa-briefcase"></i> Professional Journey</h2>
             <div class="experience-item">
                 <h3>Java Developer</h3>
                 <div class="company">PAYOK | Dubai</div>
                 <div class="duration">November 2024 - Present</div>
-              <div class="section-title">Payment Solutions Development</div>
-        <ul>
-            <li>Implemented microservices-based payment solutions using Java and Spring Boot for scalable enterprise applications</li>
-            <li>Collaborated with cross-functional teams to deliver payment features within agile sprints using Apache Dubbo for service communication</li>
-            <li>Designed cloud-native infrastructure on AWS with Docker containerization and CI/CD pipelines through Jenkins</li>
-            <li>Implemented secure RESTful APIs and event-driven architectures for third-party channel integrations</li>
-            <li>Maintained 100% unit test coverage using JUnit with continuous integration through Gitee repositories</li>
-        </ul>
-
-        <div class="section-title">Additional Spring Boot Applications</div>
-        
-        <div class="subsection-title">Automated Developer Notification System</div>
-        <ul>
-            <li>Built Java-based microservice integrating Telegram with official internal communication platforms to ensure timely resolution of merchant queries</li>
-            <li>Implemented automated notification system to prevent merchant queries from being overlooked in high-volume Telegram message streams</li>
-        </ul>
-
-        <div class="subsection-title">Operations Data Processing Tool</div>
-        <ul>
-            <li>Developed Spring Boot web application to automate transaction data extraction from CSV and XLS input files</li>
-            <li>Streamlined operations team workflow by eliminating manual copy-paste processes and enabling direct file downloads</li>
-            <li>Reduced processing errors and significantly improved time efficiency for channel-specific transaction detail processing</li>
-        </ul>
+                <div class="subsection-title">Payment Solutions Development</div>
+                <ul>
+                    <li>Implemented microservices-based payment solutions using Java and Spring Boot for scalable enterprise applications.</li>
+                    <li>Collaborated with cross-functional teams to deliver payment features within agile sprints using Apache Dubbo for service communication.</li>
+                    <li>Designed cloud-native infrastructure on AWS with Docker containerization and CI/CD pipelines through Jenkins.</li>
+                    <li>Maintained 100% unit test coverage using JUnit with continuous integration through Gitee repositories.</li>
+                </ul>
             </div>
             
             <div class="experience-item">
                 <h3>Solution Engineer</h3>
                 <div class="company">IBS Software | Kochi</div>
                 <div class="duration">July 2022 - September 2024</div>
-                <p>Developed enterprise Java applications with focus on performance optimization. Led production issue resolution with prompt root cause analysis. Mentored junior developers and received multiple Team Champ awards for consistent delivery excellence.</p>
+                <div class="subsection-title">Enterprise Systems & Mentorship</div>
+                <ul>
+                    <li>Developed enterprise Java applications with focus on performance optimization.</li>
+                    <li>Led production issue resolution with prompt root cause analysis.</li>
+                    <li>Mentored junior developers and received multiple Team Champ awards for consistent delivery excellence.</li>
+                </ul>
             </div>
             
             <div class="experience-item">
                 <h3>Software Development Intern → Full-Stack Developer</h3>
                 <div class="company">Converj</div>
                 <div class="duration">January 2022 - June 2022</div>
-                <p>Contributed to B2B fintech payment solutions. Quickly mastered Go and React frameworks, earning a full-time job offer based on exceptional performance and innovative contributions to payment system architecture.</p>
+                <div class="subsection-title">Fintech Innovation</div>
+                <ul>
+                    <li>Contributed to B2B fintech payment solutions.</li>
+                    <li>Quickly mastered Go and React frameworks, earning a full-time job offer based on exceptional performance and innovative contributions to payment system architecture.</li>
+                </ul>
             </div>
         </div>
 
-        <!-- Technical Blog & Knowledge Sharing -->
         <div class="section" id="blog">
-            <h2>📚 Technical Blog & Knowledge Sharing</h2>
-            <p style="margin-bottom: 25px; font-size: 1.1em; color: #555;">Sharing knowledge and helping developers master Java ecosystem complexities through comprehensive tutorials and real-world examples.</p>
+            <h2><i class="fas fa-book-open"></i> Technical Blog & Knowledge Sharing</h2>
+            <p style="text-align: center; margin-bottom: 25px; font-size: 1.1em; color: #555;">Sharing knowledge and helping developers master Java ecosystem complexities through comprehensive tutorials and real-world examples.</p>
             
             <div class="blog-grid">
-              <a href="https://shafnaashraf.github.io/java" class="blog-post-link">
+                <a href="https://shafnaashraf.github.io/java" class="blog-post-link">
                     <div class="blog-post">
                         <h3>Core Java Concepts</h3>
                     </div>
@@ -500,144 +463,101 @@
                         <h3>Servlets & Web Development</h3>
                     </div>
                 </a>
-                <a href="https://shafnaashraf.github.io/jsp" class="blog-post-link">
-                    <div class="blog-post">
-                        <h3>Java Sever Pages (JSP) </h3>
-                    </div>
-                </a>
-                <a href="https://shafnaashraf.github.io/jwt" class="blog-post-link">
-                     <div class="blog-post">
-                        <h3>JWT</h3>
-                     </div>
-                </a>
                 <a href="https://shafnaashraf.github.io/spring" class="blog-post-link">
                     <div class="blog-post">
                         <h3>Spring Framework and Spring Boot</h3>
                     </div>
-               </a>
+                </a>
                 <a href="https://shafnaashraf.github.io/kafka" class="blog-post-link">
                     <div class="blog-post">
                         <h3>Apache Kafka Integration</h3>
                     </div>
                 </a>
-                 <a href="https://shafnaashraf.github.io/devops" class="blog-post-link">
-                    <div class="blog-post">
-                        <h3>DevOps for Java Developers</h3>
-                    </div>
-                 </a>
             </div>
         </div>
 
-        <!-- Achievements & Recognition -->
-        <div class="section">
-            <h2>🏆 Achievements & Recognition</h2>
-            <div class="achievements">
-                <div class="achievement-item">
-                    <div class="icon">🥇</div>
-                    <h4>Multiple Team Champ Awards</h4>
-                    <p>IBS Software - Consistent on-time delivery</p>
-                </div>
-                <div class="achievement-item">
-                    <div class="icon">⭐</div>
-                    <h4>Department Champion</h4>
-                    <p>Core module stabilization & reliability</p>
-                </div>
-                <div class="achievement-item">
-                    <div class="icon">🎓</div>
-                    <h4>Academic Excellence</h4>
-                    <p>CGPA 9.67/10 - Overall Academic Topper</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Contact Section -->
-        <div class="section">
-            <h2>🤝 Let's Connect</h2>
-            <div class="contact-form">
-                <p style="text-align: center; margin-bottom: 30px; font-size: 1.1em; color: #555;">
-                    Interested in collaboration, technical discussions, or exploring opportunities? Let's connect!
-                </p>
-                
-                <div class="form-group">
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="subject">Subject</label>
-                    <input type="text" id="subject" name="subject" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="6" required placeholder="Let me know how I can help or what you'd like to discuss..."></textarea>
-                </div>
-                
-                <button type="submit" class="submit-btn">Send Message</button>
-            </div>
+        <div class="section" id="contact">
+            <h2><i class="fas fa-handshake"></i> Let's Connect</h2>
+            <p style="text-align: center; margin-bottom: 30px; font-size: 1.1em; color: #555;">
+                Interested in collaboration, technical discussions, or exploring opportunities? Let's connect!
+            </p>
             
-            <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee;">
-                <p><strong>📧 Email:</strong> shafna19ashraf@gmail.com</p>
-                <p><strong>📱 Phone:</strong> +971589656612</p>
-                <p><strong>📍 Location:</strong> Dubai, UAE (Open to remote opportunities)</p>
+            <div class="contact-form">
+                <form action="https://formspree.io/f/your-form-id" method="POST">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" required placeholder="Let me know how I can help or what you'd like to discuss..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
             </div>
         </div>
     </div>
 
     <script>
-        // Add smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
+        document.addEventListener('DOMContentLoaded', () => {
+            // Count-up animation for stats
+            const stats = document.querySelectorAll('.stat-number');
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.5
+            };
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const target = entry.target;
+                        const targetValue = parseInt(target.getAttribute('data-target'));
+                        let count = 0;
+                        const duration = 2000;
+                        const step = targetValue / (duration / 16);
+                        
+                        const counter = setInterval(() => {
+                            count += step;
+                            if (count >= targetValue) {
+                                target.textContent = targetValue;
+                                clearInterval(counter);
+                            } else {
+                                target.textContent = Math.ceil(count);
+                            }
+                        }, 16);
+                        
+                        observer.unobserve(target);
+                    }
                 });
-            });
-        });
+            }, observerOptions);
 
-        // Contact form handling
-        document.querySelector('.submit-btn').addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const subject = document.getElementById('subject').value;
-            const message = document.getElementById('message').value;
-            
-            if (name && email && subject && message) {
-                // Create mailto link
-                const mailtoLink = `mailto:shafna19ashraf@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`From: ${name} (${email})\n\n${message}`)}`;
-                window.location.href = mailtoLink;
-            } else {
-                alert('Please fill in all fields');
-            }
-        });
+            stats.forEach(stat => observer.observe(stat));
 
-        // Add animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
+            // Fade-in animation for sections on scroll
+            const sections = document.querySelectorAll('.section');
+            const sectionObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.section').forEach(section => {
-            section.style.opacity = '0';
-            section.style.transform = 'translateY(20px)';
-            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(section);
+            sections.forEach(section => sectionObserver.observe(section));
         });
     </script>
 </body>
