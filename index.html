@@ -457,7 +457,7 @@
 </head>
 <body>
     <div class="container">
-        <header>
+        <header class="section">
             <h1>Shafna Ashraf</h1>
             <h2>Senior Java Backend Developer</h2>
             <div class="social-links">
@@ -638,7 +638,7 @@
 
         const observer = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
-                if (entry.is-visible) {
+                if (entry.isIntersecting) {
                     entry.target.classList.add('is-visible');
                     observer.unobserve(entry.target);
                 }
