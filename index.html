@@ -42,24 +42,31 @@
             position: relative;
         }
 
+        .section {
+            padding: 80px 0;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        .section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* --- Header Section --- */
         header {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
+            padding: 100px 0;
             text-align: center;
-            position: relative;
             animation: fadeIn 1.5s ease-out;
-            padding-bottom: 50px;
         }
 
         header h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 5em;
+            font-size: 4em;
             font-weight: 700;
-            margin-bottom: 10px;
-            letter-spacing: 2px;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
             background: linear-gradient(90deg, var(--primary-accent), var(--secondary-accent));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -67,7 +74,7 @@
         }
         
         header h2 {
-            font-size: 1.5em;
+            font-size: 1.3em;
             color: var(--gray-light);
             font-weight: 300;
             margin-bottom: 20px;
@@ -75,13 +82,14 @@
 
         .social-links {
             display: flex;
-            gap: 25px;
+            justify-content: center;
+            gap: 20px;
             margin-top: 30px;
         }
 
         .social-links a {
             color: var(--text-light);
-            font-size: 1.5em;
+            font-size: 1.3em;
             transition: color 0.3s ease, transform 0.3s ease;
         }
 
@@ -90,35 +98,16 @@
             transform: scale(1.2);
         }
 
-        .scroll-down {
-            position: absolute;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            font-size: 0.9em;
-            color: var(--gray-light);
-            opacity: 0.7;
-        }
-
-        .scroll-down i {
-            font-size: 2em;
-            animation: bounce 2s infinite;
-            margin-top: 5px;
-        }
-        
+        /* --- Section Header --- */
         .section-header {
             text-align: center;
-            margin-bottom: 80px;
+            margin-bottom: 60px;
             position: relative;
-            animation: fadeInUp 1s ease-out;
         }
 
         .section-header h2 {
             font-family: 'Playfair Display', serif;
-            font-size: 3.5em;
+            font-size: 3em;
             color: var(--text-light);
             position: relative;
             display: inline-block;
@@ -137,29 +126,25 @@
             animation: expandLine 1s ease-out forwards;
         }
 
-        .section-content {
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 1s ease-out forwards;
-        }
-
+        /* --- About Section --- */
         #about p {
             font-size: 1.1em;
             line-height: 1.8;
             max-width: 800px;
-            margin: 0 auto 30px;
+            margin: 0 auto;
             text-align: center;
             font-weight: 300;
+            color: var(--gray-light);
         }
 
-        #skills .skill-grid {
+        /* --- Skills Section --- */
+        #skills .skill-grid, #knowledge .blog-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 40px;
-            margin-top: 50px;
         }
 
-        .skill-item {
+        .skill-item, .blog-item {
             text-align: center;
             background: rgba(255, 255, 255, 0.05);
             padding: 30px;
@@ -179,7 +164,7 @@
             margin-bottom: 20px;
         }
 
-        .skill-item h3 {
+        .skill-item h3, .blog-item h3 {
             font-size: 1.4em;
             color: var(--secondary-accent);
             margin-bottom: 15px;
@@ -207,6 +192,7 @@
             left: 0;
         }
         
+        /* --- Experience Section --- */
         #experience .timeline-container {
             position: relative;
             max-width: 800px;
@@ -227,7 +213,6 @@
         .timeline-block {
             padding: 10px 40px;
             position: relative;
-            background-color: inherit;
             width: 50%;
         }
 
@@ -287,11 +272,6 @@
             margin-bottom: 10px;
         }
 
-        .timeline-content p {
-            font-size: 0.95em;
-            color: var(--gray-light);
-        }
-
         .timeline-content ul {
             list-style-type: disc;
             padding-left: 20px;
@@ -303,10 +283,35 @@
             margin-bottom: 5px;
         }
 
+        /* --- Knowledge Sharing Section --- */
+        .blog-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            height: 100%;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+        .blog-item:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 10px 20px rgba(0, 196, 204, 0.2);
+        }
+        .blog-item h3 {
+            margin: 0;
+            font-size: 1.3em;
+        }
+        .blog-item a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* --- Contact Section --- */
         .contact-content {
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
             gap: 50px;
         }
         
@@ -314,7 +319,6 @@
             text-align: right;
             border-right: 2px solid var(--gray-light);
             padding-right: 50px;
-            
         }
 
         .contact-info h3 {
@@ -402,26 +406,15 @@
             margin-top: 80px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
-
+        
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
 
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
         @keyframes expandLine {
             from { width: 0; }
             to { width: 80px; }
-        }
-
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-            40% { transform: translateY(-10px); }
-            60% { transform: translateY(-5px); }
         }
 
         @media (max-width: 768px) {
@@ -456,6 +449,9 @@
                 border-bottom: 2px solid var(--gray-light);
                 padding-bottom: 20px;
             }
+            .contact-form {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -464,19 +460,15 @@
         <header>
             <h1>Shafna Ashraf</h1>
             <h2>Senior Java Backend Developer</h2>
-            <p>Building robust, scalable backend systems and empowering the developer community through technical mentorship.</p>
             <div class="social-links">
                 <a href="https://github.com/shafnaashraf" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/shafna-ashraf-/" target="_blank"><i class="fab fa-linkedin"></i></a>
                 <a href="#contact"><i class="fas fa-envelope"></i></a>
-                <a href="#blog"><i class="fas fa-blog"></i></a>
+                <a href="#knowledge"><i class="fas fa-blog"></i></a>
             </div>
-            <a href="#about" class="scroll-down">
-                Scroll Down <i class="fas fa-chevron-down"></i>
-            </a>
         </header>
 
-        <section id="about" class="section-content">
+        <section id="about" class="section">
             <div class="section-header">
                 <h2>About Me</h2>
             </div>
@@ -485,7 +477,7 @@
             </p>
         </section>
 
-        <section id="skills" class="section-content">
+        <section id="skills" class="section">
             <div class="section-header">
                 <h2>Technical Expertise</h2>
             </div>
@@ -523,7 +515,7 @@
             </div>
         </section>
         
-        <section id="experience" class="section-content">
+        <section id="experience" class="section">
             <div class="section-header">
                 <h2>Professional Journey</h2>
             </div>
@@ -566,7 +558,31 @@
             </div>
         </section>
         
-        <section id="contact" class="section-content">
+        <section id="knowledge" class="section">
+            <div class="section-header">
+                <h2>Knowledge Sharing</h2>
+            </div>
+            <div class="blog-grid">
+                <a href="https://shafnaashraf.github.io/java" target="_blank" class="blog-item">
+                    <i class="fas fa-book-reader"></i>
+                    <h3>Core Java Concepts</h3>
+                </a>
+                <a href="https://shafnaashraf.github.io/servlet" target="_blank" class="blog-item">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>Servlets & Web Development</h3>
+                </a>
+                <a href="https://shafnaashraf.github.io/spring" target="_blank" class="blog-item">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Spring Framework & Spring Boot</h3>
+                </a>
+                <a href="https://shafnaashraf.github.io/kafka" target="_blank" class="blog-item">
+                    <i class="fas fa-paper-plane"></i>
+                    <h3>Apache Kafka Integration</h3>
+                </a>
+            </div>
+        </section>
+        
+        <section id="contact" class="section">
             <div class="section-header">
                 <h2>Let's Connect</h2>
             </div>
@@ -613,7 +629,7 @@
             });
         });
 
-        const sections = document.querySelectorAll('.section-content');
+        const sections = document.querySelectorAll('.section');
         const observerOptions = {
             root: null,
             rootMargin: '0px',
@@ -622,9 +638,8 @@
 
         const observer = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
+                if (entry.is-visible) {
+                    entry.target.classList.add('is-visible');
                     observer.unobserve(entry.target);
                 }
             });
