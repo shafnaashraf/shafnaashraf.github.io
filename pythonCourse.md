@@ -1,6 +1,6 @@
 ---
 layout: default
-title:Python for Data science
+title: Python for Data science
 permalink: /pythonCourse/
 ---
 ## 📝 Contents
