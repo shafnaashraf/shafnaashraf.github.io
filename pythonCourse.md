@@ -8,4 +8,5 @@ permalink: /pythonCourse/
 2. [Numpy for data analysis](pythonCourse2.md)
 3. [Pandas for data analysis - Part 1](pythonCourse3.md)
 4. [Pandas for data analysis - Part 2](pythonCourse4.md)
+5. [Python Data Visualization with Matplotlib](pythonCourse5.md)
 
