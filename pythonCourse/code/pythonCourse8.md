@@ -1,4 +1,4 @@
-# Python Data Science Tutorial 3: Interactive Data Visualization with Plotly & Cufflinks
+# Interactive Data Visualization with Plotly & Cufflinks
 
 ## Table of Contents
 1. [Introduction](#introduction)
