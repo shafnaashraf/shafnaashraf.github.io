@@ -10,4 +10,5 @@ permalink: /pythonCourse/
 4. [Pandas for data analysis - Part 2](pythonCourse4.md)
 5. [Python Data Visualization with Matplotlib](pythonCourse5.md)
 6. [Seaborn - Data visualization](pythonCourse6.md)
+7. [Pandas in built data visualization](pythonCourse7.md)
 
