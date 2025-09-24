@@ -12,4 +12,5 @@ permalink: /pythonCourse/
 6. [Seaborn - Data visualization](pythonCourse6.md)
 7. [Pandas in built data visualization](pythonCourse7.md)
 8. [Interactive Data Visualization with Plotly & Cufflinks](pythonCourse8.md)
+9. [Geographical plotting with Plotly](pythonCourse9.md)
 
