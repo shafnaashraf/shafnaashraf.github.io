@@ -77,7 +77,7 @@ plt.show()
 ```
 
 **What you'll see:** A histogram with a smooth curve overlay showing the distribution shape.
-![Dist Plot Example](images/distplot_example.png)
+![Dist Plot Example](../images/distplot_example.png)
 ```python
 # Histogram only (remove KDE)
 plt.figure(figsize=(10, 6))
@@ -101,7 +101,7 @@ sns.jointplot(x='total_bill', y='tip', data=tips)
 plt.show()
 ```
 
-![Joint Plot Example](images/jointplot_example.png)
+![Joint Plot Example](../images/jointplot_example.png)
 *Example of a joint plot showing the relationship between total_bill and tip*
 
 **Understanding the Joint Plot Output:**
@@ -171,7 +171,7 @@ sns.pairplot(tips, hue='sex', palette='Set1')
 plt.show()
 ```
 
-![Pair Plot Example](images/pairplot_example.png)
+![Pair Plot Example](../images/pairplot_example.png)
 *Example of a pair plot with gender-based color coding showing relationships between multiple variables*
 
 **Detailed Analysis of the Pair Plot with Gender (hue='sex'):**
