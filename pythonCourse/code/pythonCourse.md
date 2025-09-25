@@ -14,4 +14,6 @@ permalink: /pythonCourse/
 8. [Interactive Data Visualization with Plotly & Cufflinks](pythonCourse8.md)
 9. [Geographical plotting with Plotly](pythonCourse9.md)
 10. [Machine learning](pythonCourse10.md)
+11. [Linear Regression](pythonCourse11.md)
+12. [Logistic Regression](pythonCourse12.md)
 
