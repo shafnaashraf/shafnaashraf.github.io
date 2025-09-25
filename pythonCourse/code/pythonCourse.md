@@ -16,4 +16,5 @@ permalink: /pythonCourse/
 10. [Machine learning](pythonCourse10.md)
 11. [Linear Regression](pythonCourse11.md)
 12. [Logistic Regression](pythonCourse12.md)
+13. [K Nearest Neighbor](pythonCourse13.md)
 
