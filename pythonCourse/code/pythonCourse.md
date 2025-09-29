@@ -18,4 +18,5 @@ permalink: /pythonCourse/
 12. [Logistic Regression](pythonCourse12.md)
 13. [K Nearest Neighbor](pythonCourse13.md)
 14. [Tree-Based Algorithms](pythonCourse14.md)
+15. [Support Vector Machine](pythonCourse15.md)
 
