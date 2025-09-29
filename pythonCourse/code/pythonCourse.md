@@ -20,4 +20,5 @@ permalink: /pythonCourse/
 14. [Tree-Based Algorithms](pythonCourse14.md)
 15. [Support Vector Machine](pythonCourse15.md)
 16. [K Means clustering](pythonCourse16.md)
+17. [Principle Component Analysis](pythonCourse17.md)
 
