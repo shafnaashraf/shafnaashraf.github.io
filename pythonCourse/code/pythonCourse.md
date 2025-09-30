@@ -21,4 +21,5 @@ permalink: /pythonCourse/
 15. [Support Vector Machine](pythonCourse15.md)
 16. [K Means clustering](pythonCourse16.md)
 17. [Principle Component Analysis](pythonCourse17.md)
+18. [Artificial Neural Network - Part1](pythonCourse18.md)
 
