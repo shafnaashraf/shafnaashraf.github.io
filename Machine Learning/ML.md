@@ -4,4 +4,4 @@ title: Python for Data science
 permalink: /pythonCourse/
 ---
 ## 📝 Contents
-1. [Introduction to Machine Learning](Introduction.md)
+1. [Introduction to Machine Learning](IntroML.md)
