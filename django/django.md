@@ -7,5 +7,6 @@ permalink: /django/
 
 ## CONTENTS
 1. [Introduction to Django](django1.md)
+2. [Creating Simple project](django2.md)
   
     
