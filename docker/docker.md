@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Core Java Mastery
+title:Docker
 permalink: /docker/
 ---
 # Docker: Zero to Hero 🐳
