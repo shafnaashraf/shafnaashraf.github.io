@@ -1,3 +1,8 @@
+---
+layout: default
+title: Core Java Mastery
+permalink: /docker/
+---
 # Docker: Zero to Hero 🐳
 ### A complete, no-jargon guide for absolute beginners to confident professionals
 
