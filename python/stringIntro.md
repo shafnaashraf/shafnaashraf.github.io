@@ -278,3 +278,5 @@ This is especially useful for paragraphs, documentation strings, or any block of
 | Triple quotes | A blank notebook page | `"""...multi-line..."""` |
 
 ---
+ 
+**Next up:** [Lists  →](./listIntro.md)
