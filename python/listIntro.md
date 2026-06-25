@@ -410,5 +410,6 @@ nums[2:4] = [100, 74]
 6. Print how many movies are left using `len()`.
 
 ---
-
-**Next up:** [Tuples — The "Sealed Box" Version of a List →](#)
+**Previous:** [← Strings in Python](./stringIntro.md)
+ 
+**Next up:** [Tuples — The "Sealed Box" Version of a List →](./tupIntro.md)
