@@ -276,4 +276,5 @@ num1
 
 ---
 
-**Next up:** [Dictionaries — Storing Data as Labeled Pairs →](#)
+**Previous:** [← Lists](./listIntro.md)
+ 
